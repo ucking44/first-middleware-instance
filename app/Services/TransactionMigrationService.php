@@ -11,9 +11,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class TransactionMigrationService extends MigrationService{
-    public static $key = '!QAZXSW@#EDCVFR$';
+    public static $key = 'bankxyz';
     public static $iv = '5666685225155700';
-    public static $username = 'diamondcustomer';
+    public static $username = 'bank_xyz2023';
     public static $link = "https://fbn-customer-portal.vercel.app";
     public static $placeholders = array('$first_name', '$last_name', '$points_earned','$current_balance', '$program', '$Membership_ID', '$link', '$product_name');
     //public static $password =  self::$password = parent::string_encrypt('Di@mond10$#', self::$key,self::$iv);

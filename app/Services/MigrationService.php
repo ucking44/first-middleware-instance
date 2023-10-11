@@ -4,7 +4,8 @@ namespace App\Services;
 use App\Models\Enrollment;
 class MigrationService
 {
-    public static $key = '!QAZXSW@#EDCVFR$';
+    //public static $key = '!QAZXSW@#EDCVFR$';
+    public static $key = 'bankxyz';
     public static $iv = '5666685225155700';
     protected static $program = "First Bank Loyalty Programme";
     protected static $placeholders = array('$memberID', '$first_name', '$last_name', '$pin', '$points', '$email', '$program');

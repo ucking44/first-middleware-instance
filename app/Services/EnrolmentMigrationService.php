@@ -12,7 +12,8 @@ use Illuminate\Database\Migrations\Migration;
 class EnrolmentMigrationService extends MigrationService
 {
     public static $username, $password;
-    public static $key = '!QAZXSW@#EDCVFR$';
+    //public static $key = '!QAZXSW@#EDCVFR$';
+    public static $key = 'bankxyz';
     public static $iv = '5666685225155700';
     public static $placeholders = array('$first_name', '$last_name', '$membership_id',  '$password', '$program', '$link');
 
@@ -24,9 +25,11 @@ class EnrolmentMigrationService extends MigrationService
     public static function migrateEnrolments1() : string
     {
         //$this->key = '!QAZXSW@#EDCVFR$';
-        self::$username = 'diamondcustomer';
+        //self::$username = 'diamondcustomer';
+        self::$username = 'bank_xyz2023';
 
-        self::$password = parent::string_encrypt('Di@mond10$#', self::$key,self::$iv);
+        //self::$password = parent::string_encrypt('Di@mond10$#', self::$key,self::$iv);
+        self::$password = parent::string_encrypt('bank_xyz@2023!', self::$key,self::$iv);
 
         $data = [];
 

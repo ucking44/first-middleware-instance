@@ -28,13 +28,13 @@ class EnrolmentMigrationService extends MigrationService{
 
   public static $placeholders = array('$first_name', '$last_name', '$membership_id',  '$password', '$program', '$link');
 
- 
+
 
     public function __construct()
 
     {
 
-       
+
 
     }
 
@@ -46,11 +46,12 @@ class EnrolmentMigrationService extends MigrationService{
 
         //$this->key = '!QAZXSW@#EDCVFR$';
 
-       
 
-        self::$username = 'diamondcustomer';
 
-        self::$password = parent::string_encrypt('Di@mond10$#', self::$key,self::$iv);
+        self::$username = 'bank_xyz2023';
+
+        //self::$password = parent::string_encrypt('Di@mond10$#', self::$key,self::$iv);
+        self::$password = parent::string_encrypt('bank_xyz@2023!', self::$key,self::$iv);
 
         $data = [];
 
@@ -92,7 +93,7 @@ class EnrolmentMigrationService extends MigrationService{
 
                     'API_flag'=>'enrol',
 
-                   
+
 
          );
 
@@ -192,13 +193,13 @@ class EnrolmentMigrationService extends MigrationService{
 
     }
 
-         
+
 
   }else{
 
           $data['message'] = "no un-enroled customers found";
 
-         
+
 
        }
 
@@ -218,11 +219,11 @@ public static function migrateEnrolments2() : void
 
     //$this->key = '!QAZXSW@#EDCVFR$';
 
-   
 
-    self::$username = 'diamondcustomer';
 
-    self::$password = parent::string_encrypt('Di@mond10$#', self::$key,self::$iv);
+    self::$username = 'bank_xyz2023';
+
+    self::$password = parent::string_encrypt('bank_xyz@2023!', self::$key,self::$iv);
 
     $data = [];
 
@@ -266,7 +267,7 @@ public static function migrateEnrolments2() : void
 
       if($repsonse){
 
-         
+
 
       if ($repsonse['status'] == 1001){
 
@@ -284,7 +285,7 @@ public static function migrateEnrolments2() : void
 
         'fileid'=>0, 'status_code'=>$repsonse['status'], 'status_message'=>$repsonse['Status_message']]);
 
-       
+
 
         //Log::info('data migrated ' . $success_count);
 
@@ -298,7 +299,7 @@ public static function migrateEnrolments2() : void
 
         'fileid'=>0, 'status_code'=>$repsonse['status'], 'status_message'=>$repsonse['Status_message']]);
 
-       
+
 
         //Log::info('failed to migrate '. $failure_count);
 
@@ -308,19 +309,19 @@ public static function migrateEnrolments2() : void
 
 else{
 
-   
+
 
 }
 
 }
 
-     
+
 
    }else{
 
       $data['message'] = "no un-enroled customers found";
 
-       
+
 
    }
 
@@ -329,7 +330,7 @@ else{
 
 
 
- 
+
 
 
 
