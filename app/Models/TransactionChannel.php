@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class TransactionChannel extends Model
 {
     use HasFactory;
+
+    protected $table = "transaction_channels";
+
+    protected $primaryKey = "id";
+
+    protected $fillable = [
+        'name',
+        'code',
+        'company_id'
+    ];
+
 }

@@ -17,8 +17,8 @@ class CreateChannelConfigsTable extends Migration
             $table->id();
             $table->foreignId("channel_id")->constrained("notification_channels");
             $table->foreignId("program_id")->constrained("loyalty_programs");
-            $table->string("target");
-            $table->text("config");
+            $table->string("target")->nullable();
+            $table->text("config")->nullable();
             $table->string("sender_id")->nullable();
             $table->string("sender_name")->nullable();
             $table->string("header")->nullable();

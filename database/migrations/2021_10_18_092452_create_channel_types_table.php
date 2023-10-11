@@ -15,9 +15,9 @@ class CreateChannelTypesTable extends Migration
     {
         Schema::create('channel_types', function (Blueprint $table) {
             $table->id();
-            $table->string("name");//;//->collation("utf8mb4_unicode_ci");
-            $table->string("slug");//;//->collation("utf8mb4_unicode_ci");
-            $table->string("validate");
+            $table->string("name")->nullable();//;//->collation("utf8mb4_unicode_ci");
+            $table->string("slug")->nullable();//;//->collation("utf8mb4_unicode_ci");
+            $table->string("validate")->nullable();
             $table->tinyInteger("status")->default(1);
             $table->timestamp("created_at")->default(now());
         });

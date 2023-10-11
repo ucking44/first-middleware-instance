@@ -15,7 +15,7 @@ class CreateUniqueNoTable extends Migration
     {
         Schema::create('unique_no', function (Blueprint $table) {
             $table->id();
-            $table->string('detail');
+            $table->string('detail')->nullable();
             $table->timestamps();
         });
     }

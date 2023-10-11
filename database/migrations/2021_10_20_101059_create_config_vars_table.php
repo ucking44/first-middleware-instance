@@ -16,8 +16,8 @@ class CreateConfigVarsTable extends Migration
         Schema::create('config_vars', function (Blueprint $table) {
             $table->id();
             $table->foreignId("channel_id")->constrained("notification_channels");
-            $table->string("key");//;//->collation("utf8mb4_unicode_ci");
-            $table->tinyInteger("required");
+            $table->string("key")->nullable();//;//->collation("utf8mb4_unicode_ci");
+            $table->tinyInteger("required")->nullable();
             $table->tinyInteger("status")->default(1);
             $table->timestamps();
         });

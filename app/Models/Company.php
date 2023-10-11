@@ -9,7 +9,9 @@ class Company extends Model
 {
     use HasFactory;
 
-    protected $table ="companies";
+    protected $table = "companies";
+
+    protected $primaryKey = "id";
 
     protected $fillable = [
         'company_name',

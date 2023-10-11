@@ -15,26 +15,26 @@ class CreateTransactionLogTable extends Migration
     {
         Schema::create('transaction_log', function (Blueprint $table) {
             $table->id();
-            $table->string('trandate');
-            $table->bigInteger('customerid')->unsigned();
-            $table->foreign('customerid')->references('id')->on('enrollments');
-            $table->string('memberid');
-            $table->string('productcode');
+            $table->string('trandate')->nullable();
+            $table->unsignedBigInteger('customerid')->nullable();
+            $table->string('memberid')->nullable();
+            $table->string('productcode')->nullable();
             $table->integer('quantity')->default(1);
-            $table->string('description');  
-            $table->string('tranchannel');
-            $table->string('tranamt');
-            $table->string('branchcode');
-            $table->bigInteger('tranid')->unsigned();
-            $table->foreign('tranid')->references('id')->on('transactions');
+            $table->string('description')->nullable();
+            $table->string('tranchannel')->nullable();
+            $table->string('tranamt')->nullable();
+            $table->string('branchcode')->nullable();
+            $table->unsignedBigInteger('tranid')->nullable();
             $table->string('senddate')->default(0);
             $table->string('status_code')->default(0);
             $table->string('status_message')->default(0)->nullable();
             $table->tinyInteger('cronid')->default(0);
             $table->tinyInteger('tries')->default(0);
             $table->tinyInteger('status')->default(0);
-            $table->string('points_earned');
-            $table->bigInteger('fileid');
+            $table->string('points_earned')->nullable();
+            $table->bigInteger('fileid')->nullable();
+            $table->foreign('customerid')->references('id')->on('enrollments');
+            $table->foreign('tranid')->references('id')->on('transactions');
             $table->timestamps();
         });
     }

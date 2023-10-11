@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Variable extends Model
 {
     use HasFactory;
+
+    protected $table = "variables";
+
+    protected $primaryKey = "id";
+
+    protected $fillable = [
+        'name',
+        'description',
+        'status'
+    ];
+
 }

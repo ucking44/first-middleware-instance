@@ -15,7 +15,7 @@ class CreateMailingGroupsTable extends Migration
     {
         Schema::create('mailing_groups', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
+            $table->string("name")->nullable();
             $table->foreignId("program_id")->constrained("loyalty_programs");
             $table->tinyInteger("status")->default(1);
             $table->timestamps();

@@ -15,8 +15,8 @@ class CreateTiersTable extends Migration
     {
         Schema::create('tiers', function (Blueprint $table) {
             $table->id();
-            $table->string('tier_name');
-            $table->bigInteger('loyalty_program_id')->unsigned();
+            $table->string('tier_name')->nullable();
+            $table->unsignedBigInteger('loyalty_program_id')->nullable();
             $table->foreign('loyalty_program_id')->references('id')->on('loyalty_programs');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

@@ -15,9 +15,9 @@ class CreateNotificationTypesTable extends Migration
     {
         Schema::create('notification_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name');//;//->collation("utf8mb4_unicode_ci");
-            $table->string('slug');//;//->collation("utf8mb4_unicode_ci");
-            $table->string('description');//->collation("utf8mb4_unicode_ci");
+            $table->string('name')->nullable();//;//->collation("utf8mb4_unicode_ci");
+            $table->string('slug')->nullable();//;//->collation("utf8mb4_unicode_ci");
+            $table->string('description')->nullable();//->collation("utf8mb4_unicode_ci");
             $table->tinyInteger("status")->unsigned()->default(1);
             $table->timestamps();
         });

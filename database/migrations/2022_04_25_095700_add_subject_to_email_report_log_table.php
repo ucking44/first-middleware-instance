@@ -15,7 +15,7 @@ class AddSubjectToEmailReportLogTable extends Migration
     {
         Schema::table('email_report_logs', function (Blueprint $table) {
             //
-            $table->string('subject')->after('enrollment_id');
+            //$table->string('subject')->after('enrollment_id');
         });
     }
 

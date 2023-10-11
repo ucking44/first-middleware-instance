@@ -12,28 +12,45 @@ class Enrollment extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $table ="enrollments";
+    protected $table = "enrollments";
+
+    protected $primaryKey = "id";
 
     protected $fillable = [
+        'loyalty_program_id',
+        'branch_id',
+        'branch_code',
+        'tier_id',
+        'branch_codes',
+        'cron_id',
+        'loyalty_number',
+        'account_number',
         'first_name',
         'middle_name',
         'last_name',
-        'loyalty_program_id',
-        'loyalty_number',
         'phone_number',
         'email',
-         'branch_code',
+        'token',
+        'receive_notification',
+        'gender',
         'current_bal',
-        'member_reference',
+        'total_credit',
+        'total_debit',
+        'blocked_points',
+        //'member_reference',
+        'member_cif',
         'first_login',
         'first_login_time',
         'terms_agreed',
         'last_change_password',
-        'pin',
-        'status',
         'password',
-        'tier_id',
-        'cron_id',
+        'pin',
+        'enrollment_status',
+        'tries',
+        'birthday',
+        'anniversary',
+        'status',
+        'date_enrolled',
     ];
 
      /**
@@ -50,7 +67,7 @@ class Enrollment extends Authenticatable
     public function LoyaltyProgram(){
         return $this->belongsTo(LoyaltyProgram::class, 'loyalty_program_id');
     }
-    
+
     public function EmailReportLog(){
         return $this->belongsTo(EmailReportLog::class);
     }

@@ -15,22 +15,22 @@ class CreateFileLogTable extends Migration
     {
         Schema::create('file_log', function (Blueprint $table) {
             $table->id();
-            $table->string('filename');
-            $table->string('uploaddate');
-            $table->string('uploadedby');
-            $table->string('filetype');
-            $table->integer('totalnumber');
-            $table->integer('totalerror');
-            $table->integer('totalpoints');
-            $table->integer('perxerrors');
-            $table->integer('status');
-            $table->string('email_code');
-            $table->text('email_message');
-            $table->text('errorreport');
-            $table->string('finishdate');
-            $table->integer('perxsuccess');
-            $table->integer('uploadsuccess');
-            $table->text('perxreport');
+            $table->string('filename')->nullable();
+            $table->string('uploaddate')->nullable();
+            $table->string('uploadedby')->nullable();
+            $table->string('filetype')->nullable();
+            $table->integer('totalnumber')->nullable();
+            $table->integer('totalerror')->nullable();
+            $table->integer('totalpoints')->nullable();
+            $table->integer('perxerrors')->nullable();
+            $table->integer('status')->nullable();
+            $table->string('email_code')->nullable();
+            $table->text('email_message')->nullable();
+            $table->text('errorreport')->nullable();
+            $table->string('finishdate')->nullable();
+            $table->integer('perxsuccess')->nullable();
+            $table->integer('uploadsuccess')->nullable();
+            $table->text('perxreport')->nullable();
             $table->timestamps();
         });
     }

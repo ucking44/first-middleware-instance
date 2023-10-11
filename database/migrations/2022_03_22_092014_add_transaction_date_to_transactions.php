@@ -15,7 +15,7 @@ class AddTransactionDateToTransactions extends Migration
     {
         Schema::table('transactions', function (Blueprint $table) {
             //
-            $table->date('transaction_date');
+            //$table->date('transaction_date');
         });
     }
 

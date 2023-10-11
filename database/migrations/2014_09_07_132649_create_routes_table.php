@@ -15,10 +15,10 @@ class CreateRoutesTable extends Migration
     {
         Schema::create('routes', function (Blueprint $table) {
             $table->id();
-            $table->tinyInteger('priviledge_id');
+            $table->tinyInteger('priviledge_id')->nullable();
             //$table->foreign('priviledge_id')->references('id')->on('privileges');
-            $table->string('route_name');
-            $table->string('activity');
+            $table->string('route_name')->nullable();
+            $table->string('activity')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

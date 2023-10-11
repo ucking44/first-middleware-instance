@@ -14,10 +14,10 @@ class CreateVariablesTable extends Migration
     public function up()
     {
         Schema::create('variables', function (Blueprint $table) {
-   
+
             $table->id();
-            $table->string("name");//;//->collation("utf8mb4_unicode_ci");
-            $table->string("description");
+            $table->string("name")->nullable();//;//->collation("utf8mb4_unicode_ci");
+            $table->string("description")->nullable();
             $table->tinyInteger("status")->default(1);
             $table->timestamps();
         });

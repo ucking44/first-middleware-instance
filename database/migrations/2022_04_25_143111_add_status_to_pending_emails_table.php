@@ -15,8 +15,8 @@ class AddStatusToPendingEmailsTable extends Migration
     {
         Schema::table('pending_emails', function (Blueprint $table) {
             //
-            $table->integer('status')->after('template_id')->default(0);
-            $table->integer('tries')->after('status')->default(0);
+            //$table->integer('status')->after('template_id')->default(0);
+            //$table->integer('tries')->after('status')->default(0);
         });
     }
 

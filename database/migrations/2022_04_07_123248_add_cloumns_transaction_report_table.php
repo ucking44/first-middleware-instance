@@ -15,12 +15,12 @@ class AddCloumnsTransactionReportTable extends Migration
     {
         Schema::table('transaction_report_logs', function (Blueprint $table) {
             //
-            $table->string('customer_reference')->after('id');
-            $table->string('account_number')->after('customer_reference');
-            $table->string('branch_code')->after('account_number');
-            $table->string('status_code')->after('branch_code');
-            $table->text('status_message')->after('status_code');
-            $table->string('transaction_date');
+            // $table->string('customer_reference')->after('id');
+            // $table->string('account_number')->after('customer_reference');
+            // $table->string('branch_code')->after('account_number');
+            // $table->string('status_code')->after('branch_code');
+            // $table->text('status_message')->after('status_code');
+            // $table->string('transaction_date');
         });
     }
 

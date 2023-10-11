@@ -15,10 +15,10 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('privilege_id')->unsigned();
+            $table->unsignedBigInteger('privilege_id')->nullable();
+            $table->string('route_name')->nullable();
+            $table->string('url')->nullable();
             $table->foreign('privilege_id')->references('id')->on('privileges');
-            $table->string('route_name');
-            $table->string('url');
             $table->timestamps();
         });
     }

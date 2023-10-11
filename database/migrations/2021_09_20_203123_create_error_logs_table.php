@@ -15,17 +15,17 @@ class CreateErrorLogsTable extends Migration
     {
         Schema::create('error_logs', function (Blueprint $table) {
             $table->id();
-            $table->integer('status_code');
-            $table->integer('cid');
-            $table->string('order_no');
-            $table->integer('billno');
-            $table->string('voucher_no');
-            $table->integer('quantity');
-            $table->integer('points_debit');
-            $table->integer('points_credit');
-            $table->integer('tran_amt');
-            $table->string('itemname');
-            $table->string('remarks');
+            $table->integer('status_code')->nullable();
+            $table->integer('cid')->nullable();
+            $table->string('order_no')->nullable();
+            $table->integer('billno')->nullable();
+            $table->string('voucher_no')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->integer('points_debit')->nullable();
+            $table->integer('points_credit')->nullable();
+            $table->integer('tran_amt')->nullable();
+            $table->string('itemname')->nullable();
+            $table->string('remarks')->nullable();
             $table->dateTime('date');
             $table->timestamps();
         });

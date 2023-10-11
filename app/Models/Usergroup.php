@@ -11,10 +11,12 @@ class Usergroup extends Model
 
     protected $table = "user_groups";
 
+    protected $primaryKey = "id";
+
     protected $fillable = [
         'name',
         'slug',
-        'status',
+        'status'
     ];
 
     public function userID(){

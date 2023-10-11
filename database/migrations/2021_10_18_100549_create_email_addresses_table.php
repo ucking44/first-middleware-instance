@@ -15,7 +15,7 @@ class CreateEmailAddressesTable extends Migration
     {
         Schema::create('email_addresses', function (Blueprint $table) {
             $table->id();
-            $table->string("email");//;//->collation("utf8mb4_unicode_ci");
+            $table->string("email")->nullable();//;//->collation("utf8mb4_unicode_ci");
             $table->foreignId("program_id")->constrained("loyalty_programs");
             $table->tinyInteger("status")->default(1);
             $table->timestamps();

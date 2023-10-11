@@ -9,21 +9,23 @@ class LoyaltyProgram extends Model
 {
     use HasFactory;
 
-    protected $table ="loyalty_programs";
+    protected $table = "loyalty_programs";
+
+    protected $primaryKey = "id";
 
     protected $fillable = [
         'company_id',
         'name',
         'currency_name',
         'image_url',
+        'slug',
         'status',
     ];
-
 
     public function enrollment(){
         return $this->hasMany(Enrollment::class);
     }
-    
+
     public function company(){
         return $this->belongsTo(Company::class);
     }

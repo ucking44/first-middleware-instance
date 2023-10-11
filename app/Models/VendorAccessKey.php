@@ -9,9 +9,12 @@ class VendorAccessKey extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['value'];
+    protected $table = "vendor_access_keys";
 
+    protected $primaryKey = "id";
 
+    protected $fillable = [
+        "value",
+    ];
 
-    
 }

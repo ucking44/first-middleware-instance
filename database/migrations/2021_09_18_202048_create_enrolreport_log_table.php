@@ -15,15 +15,15 @@ class CreateEnrolreportLogTable extends Migration
     {
         Schema::create('enrolreport_log', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('email');
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('email')->nullable();
             $table->string('phoneno')->nullable();
             $table->bigInteger('customerid')->nullable()->unsigned();
-            $table->string('branchcode');
+            $table->string('branchcode')->nullable();
             $table->bigInteger('fileid')->nullable()->unsigned();
-            $table->integer('status_code', false, true);
-            $table->text('status_message');
+            $table->integer('status_code', false, true)->nullable();
+            $table->text('status_message')->nullable();
             $table->timestamps();
         });
     }

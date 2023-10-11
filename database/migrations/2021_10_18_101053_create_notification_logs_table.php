@@ -18,8 +18,8 @@ class CreateNotificationLogsTable extends Migration
             $table->string("channel")->nullable();
             $table->foreignId("channel_type_id")->constrained("channel_types");
             $table->foreignId("not_type")->constrained("notification_types");
-            $table->string("recipient");
-            $table->string("variables");
+            $table->string("recipient")->nullable();
+            $table->string("variables")->nullable();
             $table->longText("content")->nullable();
             $table->tinyInteger("status")->default(1);
             $table->string("result")->nullable();

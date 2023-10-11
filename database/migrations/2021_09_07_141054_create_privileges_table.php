@@ -15,10 +15,10 @@ class CreatePrivilegesTable extends Migration
     {
         Schema::create('privileges', function (Blueprint $table) {
             $table->id();
-            //$table->bigInteger('ugp_id')->unsigned();
+            $table->bigInteger('ugp_id')->nullable();
             //$table->foreign('ugp_id')->references('id')->on('user_group_privileges');
-            $table->string('name');
-            $table->string('slug');
+            $table->string('name')->nullable();
+            $table->string('slug')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

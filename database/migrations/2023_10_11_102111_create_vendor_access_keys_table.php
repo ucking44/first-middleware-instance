@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddAccountNumberToTransactionsTable extends Migration
+class CreateVendorAccessKeysTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class AddAccountNumberToTransactionsTable extends Migration
      */
     public function up()
     {
-        Schema::table('transactions', function (Blueprint $table) {
-            //
-            //$table->string('account_number')->after('member_reference');
+        Schema::create('vendor_access_keys', function (Blueprint $table) {
+            $table->id();
+            $table->string('value')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -26,8 +27,6 @@ class AddAccountNumberToTransactionsTable extends Migration
      */
     public function down()
     {
-        Schema::table('transactions', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('vendor_access_keys');
     }
 }

@@ -15,11 +15,12 @@ class CreateLoyaltyProgramsTable extends Migration
     {
         Schema::create('loyalty_programs', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('company_id')->unsigned();
+            $table->unsignedBigInteger('company_id')->nullable();
             $table->foreign('company_id')->references('id')->on('companies');
-            $table->string('name');
-            $table->string('currency_name');
+            $table->string('name')->nullable();
+            $table->string('currency_name')->nullable();
             $table->string('image_url')->nullable();
+            $table->string("slug")->comment("This is done so that a routeable slug can be added")->nullable(); //;//->collation("utf8mb4_unicode_ci")
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });

@@ -15,13 +15,12 @@ class CreateTemplatesTable extends Migration
     {
         Schema::create('templates', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->foreignId("not_type_id")
-                ->constrained("notification_types");
+            $table->string("name")->nullable();
+            $table->foreignId("not_type_id")->constrained("notification_types");
             $table->foreignId("channel_id")->constrained("notification_channels");
             $table->foreignId("program_id")->constrained("loyalty_programs");
-            $table->string("subject");
-            $table->longText("content");
+            $table->string("subject")->nullable();
+            $table->longText("content")->nullable();
             $table->string("reply_to")->nullable();
             $table->tinyInteger("status")->default(1);
             $table->timestamps();

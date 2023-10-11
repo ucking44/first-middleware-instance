@@ -9,10 +9,13 @@ class Tier extends Model
 {
     use HasFactory;
 
-    protected $table ="tiers";
+    protected $table = "tiers";
+
+    protected $primaryKey = "id";
 
     protected $fillable = [
         'tier_name',
         'status',
     ];
+
 }

@@ -18,7 +18,7 @@ class CreateProgNotTypeMailGroupsTable extends Migration
             $table->foreignId("not_type_id")->constrained("notification_types");
             $table->foreignId("group_id")->constrained("mailing_groups");
             $table->foreignId("program_id")->constrained("loyalty_programs");
-            $table->string("email_copy");
+            $table->string("email_copy")->nullable();
             $table->timestamp("created_at")->default(now());
         });
     }

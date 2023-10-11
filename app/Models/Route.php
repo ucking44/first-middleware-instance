@@ -9,10 +9,15 @@ class Route extends Model
 {
     use HasFactory;
 
-    protected $table ="routes";
+    protected $table = "routes";
+
+    protected $primaryKey = "id";
 
     protected $fillable = [
+        'priviledge_id',
         'route_name',
+        'activity',
         'status',
     ];
+
 }

@@ -15,8 +15,13 @@ class CreatePendingEmailsTable extends Migration
     {
         Schema::create('pending_emails', function (Blueprint $table) {
             $table->id();
-            $table->integer('enrolment_id');
-            $table->integer('template_id');
+            $table->integer('enrolment_id')->nullable();
+            $table->integer('template_id')->nullable();
+            $table->integer('status')->default(0); //->after('template_id')->default(0);
+            $table->integer('tries')->default(0); //->after('status')->default(0);
+            $table->string('subject')->default('First Loyalty Program Notification');
+            $table->text('body')->nullable();//->default();
+            $table->string('from')->default('firstbank@loyaltysolutionsnigeria.com');
             $table->timestamps();
         });
     }

@@ -15,10 +15,10 @@ class AddColumnsToEmailReportLog extends Migration
     {
         Schema::table('email_report_logs', function (Blueprint $table) {
             //
-             $table->integer('enrollment_id')->after('id');
-             $table->integer('status')->after('enrollment_id');
-             $table->string('email')->after('status');
-             $table->text('email_body')->after('email');
+            //  $table->integer('enrollment_id')->after('id');
+            //  $table->integer('status')->after('enrollment_id');
+            //  $table->string('email')->after('status');
+            //  $table->text('email_body')->after('email');
         });
     }
 

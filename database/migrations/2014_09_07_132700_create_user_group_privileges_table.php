@@ -15,11 +15,11 @@ class CreateUserGroupPrivilegesTable extends Migration
     {
         Schema::create('user_group_privileges', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('usergroup_id')->unsigned();
-            $table->bigInteger('priviledge_id')->unsigned();// Added priviledge_id column
+            $table->unsignedBigInteger('usergroup_id')->nullable();
+            $table->unsignedBigInteger('priviledge_id')->nullable();// Added priviledge_id column
             $table->foreign('usergroup_id')->references('id')->on('user_groups');
             //$table->foreign('priviledge_id')->references('id')->on('privileges');
-            //$table->bigInteger('route_id')->unsigned();
+            $table->unsignedBigInteger('route_id')->nullable();
             //$table->foreign('route_id')->references('id')->on('routes');
             $table->tinyInteger('create')->default(0);
             $table->tinyInteger('read')->default(0);

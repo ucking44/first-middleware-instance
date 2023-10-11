@@ -16,7 +16,7 @@ class ModifyColumnsEnrolmentId extends Migration
         Schema::table('pending_emails', function (Blueprint $table) {
             //
             //$table->dropColumn('enrolment_id');
-            $table->string('enrolment_id')->change();
+            //$table->string('enrolment_id')->change();
         });
     }
 
@@ -29,7 +29,7 @@ class ModifyColumnsEnrolmentId extends Migration
     {
         Schema::table('pending_emails', function (Blueprint $table) {
             //
-            
+
             //$table->dropColumn('enrolment_id');
         });
     }

@@ -9,14 +9,15 @@ class Privilege extends Model
 {
     use HasFactory;
 
+    protected $table = "privileges";
 
-    protected $table ="priviledges";
+    protected $primaryKey = "id";
 
     protected $fillable = [
         'ugp_id',
         'name',
+        'slug',
         'status',
     ];
-
 
 }

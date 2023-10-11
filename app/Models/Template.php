@@ -9,5 +9,16 @@ class Template extends Model
 {
     use HasFactory;
 
-    protected $table ="templates";
+    protected $table = "templates";
+
+    protected $primaryKey = "id";
+
+    protected $fillable = [
+        'name',
+        'subject',
+        'content',
+        'reply_to',
+        'status',
+    ];
+
 }

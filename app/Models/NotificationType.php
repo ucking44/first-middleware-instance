@@ -8,6 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class NotificationType extends Model
 {
     use HasFactory;
+
+    protected $table = "notification_types";
+
+    protected $primaryKey = "id";
+
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'status',
+    ];
+
     public function templates()
     {
         return $this->hasMany(Template::class);

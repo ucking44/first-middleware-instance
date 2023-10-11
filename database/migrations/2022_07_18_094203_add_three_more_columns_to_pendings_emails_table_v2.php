@@ -15,9 +15,9 @@ class AddThreeMoreColumnsToPendingsEmailsTableV2 extends Migration
     {
         Schema::table('pending_emails', function (Blueprint $table) {
             //
-            $table->string('subject')->default('Fidelity Green Reward Notification');
-            $table->text('body');
-            $table->string('from')->default('greenrewards@loyaltysolutionsnigeria.com');
+            //$table->string('subject')->default('Fidelity Green Reward Notification');
+            //$table->text('body');
+            //$table->string('from')->default('greenrewards@loyaltysolutionsnigeria.com');
         });
     }
 

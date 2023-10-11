@@ -15,7 +15,7 @@ class TransactionMigrationSeeder extends Seeder
     public function run()
     {
         DB::table('transactions')->insert([
-            'member_reference' =>   'R00487924',
+            'member_cif' =>   'R00487924',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '10',
             'amount'    =>  123.98,
@@ -30,7 +30,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01855098',
+            'member_cif' =>   'R01855098',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '16',
             'amount'    =>  10.98,
@@ -45,7 +45,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R00862795',
+            'member_cif' =>   'R00862795',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -60,7 +60,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07810224',
+            'member_cif' =>   'R07810224',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '19',
             'amount'    =>  12.98,
@@ -75,7 +75,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05263192',
+            'member_cif' =>   'R05263192',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '14',
             'amount'    =>  66.98,
@@ -90,7 +90,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04094207',
+            'member_cif' =>   'R04094207',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  120,
@@ -105,7 +105,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R00515049',
+            'member_cif' =>   'R00515049',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  19,
@@ -120,7 +120,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04196801',
+            'member_cif' =>   'R04196801',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '6',
             'amount'    =>  70.98,
@@ -135,7 +135,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03645830',
+            'member_cif' =>   'R03645830',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '9',
             'amount'    =>  129,
@@ -150,7 +150,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03132868',
+            'member_cif' =>   'R03132868',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  127,
@@ -165,7 +165,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05700673',
+            'member_cif' =>   'R05700673',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '11',
             'amount'    =>  60,
@@ -180,7 +180,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04550247',
+            'member_cif' =>   'R04550247',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  120,
@@ -195,7 +195,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06788655',
+            'member_cif' =>   'R06788655',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '10',
             'amount'    =>  14,
@@ -210,7 +210,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03659837',
+            'member_cif' =>   'R03659837',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  17.89,
@@ -225,7 +225,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07827812',
+            'member_cif' =>   'R07827812',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -240,7 +240,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07827812',
+            'member_cif' =>   'R07827812',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -255,7 +255,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02135419',
+            'member_cif' =>   'R02135419',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -270,7 +270,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05151603',
+            'member_cif' =>   'R05151603',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -285,7 +285,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06468706',
+            'member_cif' =>   'R06468706',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -300,7 +300,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06114418',
+            'member_cif' =>   'R06114418',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -315,7 +315,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06747309',
+            'member_cif' =>   'R06747309',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -330,7 +330,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02730089',
+            'member_cif' =>   'R02730089',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -345,7 +345,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02781117',
+            'member_cif' =>   'R02781117',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -360,7 +360,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02781117',
+            'member_cif' =>   'R02781117',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -375,7 +375,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06747113',
+            'member_cif' =>   'R06747113',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -390,7 +390,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02863228',
+            'member_cif' =>   'R02863228',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -405,7 +405,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01466266',
+            'member_cif' =>   'R01466266',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -420,7 +420,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02287819',
+            'member_cif' =>   'R02287819',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -435,7 +435,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03089205',
+            'member_cif' =>   'R03089205',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -450,7 +450,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01629718',
+            'member_cif' =>   'R01629718',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -465,7 +465,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06677715',
+            'member_cif' =>   'R06677715',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -480,7 +480,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03486378',
+            'member_cif' =>   'R03486378',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -495,7 +495,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03712408',
+            'member_cif' =>   'R03712408',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -510,7 +510,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06511383',
+            'member_cif' =>   'R06511383',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -525,7 +525,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06729244',
+            'member_cif' =>   'R06729244',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -540,7 +540,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05136637',
+            'member_cif' =>   'R05136637',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -555,7 +555,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07190909',
+            'member_cif' =>   'R07190909',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -570,7 +570,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07260010',
+            'member_cif' =>   'R07260010',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -585,7 +585,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04523183',
+            'member_cif' =>   'R04523183',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -600,7 +600,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02249231',
+            'member_cif' =>   'R02249231',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -615,7 +615,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02739683',
+            'member_cif' =>   'R02739683',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -630,7 +630,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02739683',
+            'member_cif' =>   'R02739683',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -645,7 +645,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04836220',
+            'member_cif' =>   'R04836220',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -660,7 +660,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06454985',
+            'member_cif' =>   'R06454985',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -675,7 +675,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07659456',
+            'member_cif' =>   'R07659456',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -690,7 +690,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03639455',
+            'member_cif' =>   'R03639455',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -705,7 +705,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02782659',
+            'member_cif' =>   'R02782659',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -720,7 +720,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03371646',
+            'member_cif' =>   'R03371646',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -735,7 +735,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02316602',
+            'member_cif' =>   'R02316602',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -750,7 +750,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04053209',
+            'member_cif' =>   'R04053209',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -765,7 +765,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03051419',
+            'member_cif' =>   'R03051419',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -780,7 +780,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04598928',
+            'member_cif' =>   'R04598928',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -795,7 +795,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01824054',
+            'member_cif' =>   'R01824054',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -810,7 +810,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02821241',
+            'member_cif' =>   'R02821241',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -825,7 +825,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04945494',
+            'member_cif' =>   'R04945494',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -840,7 +840,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04945494',
+            'member_cif' =>   'R04945494',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -855,7 +855,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05782304',
+            'member_cif' =>   'R05782304',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -870,7 +870,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03271439',
+            'member_cif' =>   'R03271439',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -885,7 +885,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07262110',
+            'member_cif' =>   'R07262110',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -900,7 +900,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07262110',
+            'member_cif' =>   'R07262110',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -915,7 +915,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02807792',
+            'member_cif' =>   'R02807792',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -930,7 +930,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R00840057',
+            'member_cif' =>   'R00840057',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -945,7 +945,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03066400',
+            'member_cif' =>   'R03066400',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -960,7 +960,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05072579',
+            'member_cif' =>   'R05072579',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -975,7 +975,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02758495',
+            'member_cif' =>   'R02758495',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -990,7 +990,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03350837',
+            'member_cif' =>   'R03350837',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1005,7 +1005,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05249419',
+            'member_cif' =>   'R05249419',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1020,7 +1020,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02649391',
+            'member_cif' =>   'R02649391',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1035,7 +1035,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06923842',
+            'member_cif' =>   'R06923842',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1050,7 +1050,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04602947',
+            'member_cif' =>   'R04602947',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1065,7 +1065,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06438565',
+            'member_cif' =>   'R06438565',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1080,7 +1080,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06455140',
+            'member_cif' =>   'R06455140',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1095,7 +1095,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01694511',
+            'member_cif' =>   'R01694511',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1110,7 +1110,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R00579125',
+            'member_cif' =>   'R00579125',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1125,7 +1125,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03702657',
+            'member_cif' =>   'R03702657',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1140,7 +1140,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01936809',
+            'member_cif' =>   'R01936809',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1155,7 +1155,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03586714',
+            'member_cif' =>   'R03586714',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1170,7 +1170,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R00330820',
+            'member_cif' =>   'R00330820',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1185,7 +1185,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03378542',
+            'member_cif' =>   'R03378542',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1200,7 +1200,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02956960',
+            'member_cif' =>   'R02956960',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1215,7 +1215,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04094207',
+            'member_cif' =>   'R04094207',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1230,7 +1230,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01112212',
+            'member_cif' =>   'R01112212',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1245,7 +1245,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01354441',
+            'member_cif' =>   'R01354441',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1260,7 +1260,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06290386',
+            'member_cif' =>   'R06290386',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1275,7 +1275,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02473064',
+            'member_cif' =>   'R02473064',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1290,7 +1290,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01484025',
+            'member_cif' =>   'R01484025',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1305,7 +1305,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03189096',
+            'member_cif' =>   'R03189096',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1320,7 +1320,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R03837921',
+            'member_cif' =>   'R03837921',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1335,7 +1335,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02429804',
+            'member_cif' =>   'R02429804',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1350,7 +1350,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02137909',
+            'member_cif' =>   'R02137909',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1365,7 +1365,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04887697',
+            'member_cif' =>   'R04887697',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1380,7 +1380,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01404007',
+            'member_cif' =>   'R01404007',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1395,7 +1395,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R05066729',
+            'member_cif' =>   'R05066729',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1410,7 +1410,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02145136',
+            'member_cif' =>   'R02145136',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1425,7 +1425,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R06668118',
+            'member_cif' =>   'R06668118',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1440,7 +1440,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R02708429',
+            'member_cif' =>   'R02708429',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1455,7 +1455,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01615991',
+            'member_cif' =>   'R01615991',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1470,7 +1470,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R07154532',
+            'member_cif' =>   'R07154532',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1485,7 +1485,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R04790448',
+            'member_cif' =>   'R04790448',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,
@@ -1500,7 +1500,7 @@ class TransactionMigrationSeeder extends Seeder
             'status'    =>  1
         ]);
         DB::table('transactions')->insert([
-            'member_reference' =>   'R01299674',
+            'member_cif' =>   'R01299674',
             'product_code'  =>  'MOBA',
             'quantity'  =>  '12',
             'amount'    =>  12.98,

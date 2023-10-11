@@ -9,13 +9,14 @@ class Permission extends Model
 {
     use HasFactory;
 
-    protected $table ="permissions";
+    protected $table = "permissions";
+
+    protected $primaryKey = "id";
 
     protected $fillable = [
         'privilege_id',
         'route_name',
         'url',
     ];
-
 
 }
