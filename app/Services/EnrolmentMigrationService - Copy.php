@@ -22,7 +22,7 @@ class EnrolmentMigrationService extends MigrationService{
 
   public static $username, $password;
 
-  public static $key = '!QAZXSW@#EDCVFR$';
+  public static $key = 'bankxyz';
 
   public static $iv = '5666685225155700';
 

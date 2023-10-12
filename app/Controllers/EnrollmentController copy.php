@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Database\QueryException;
 use App\Services\SendNotificationService;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -66,7 +65,7 @@ class EnrollmentController extends Controller
             'middle_name' => 'string|nullable',
             'email' => 'required|email|unique:enrollments',
             'loyalty_program_id' => 'required|numeric',
-            'member_cif' => 'string|required',
+            'member_reference' => 'string|required',
             'branch' => 'required|numeric',
             'phone' => 'nullable|numeric',
             'tier_id' => 'required|numeric',
@@ -78,7 +77,7 @@ class EnrollmentController extends Controller
         }
 
         try {
-            $response = $this->add_enrollment($request->first_name, $request->middle_name, $request->last_name, $request->branch, $request->loyalty_program_id, $request->email, $request->phone, $request->member_cif, $request->tier_id, $request->loyalty_number);
+            $response = $this->add_enrollment($request->first_name, $request->middle_name, $request->last_name, $request->branch, $request->loyalty_program_id, $request->email, $request->phone, $request->member_reference, $request->tier_id, $request->loyalty_number);
             if (!$response) {
                 //Insert Failed Enrollment Log
                 $this->EnrolLog($request->first_name, $request->last_name, $request->email, $request->phone, $response->id, 'branchCode', $file_id=0, false, 'Customer could not be enrolled');
@@ -117,7 +116,7 @@ class EnrollmentController extends Controller
         $insert->password = $harsh_pass;
         $insert->tier_id = $tier_id;
         $insert->loyalty_number = $loyalty_number;
-        $insert->member_cif = $member_no;
+        $insert->member_reference = $member_no;
         $insert->first_login = 0;
         $insert->terms_agreed = 0;
         $insert->pin = $hash_pin;
@@ -301,7 +300,7 @@ class EnrollmentController extends Controller
     {
         try {
             $view = DB::table('enrollments');
-                    //->select('id', 'first_name', 'middle_name', 'last_name', 'loyalty_program_id', 'phone_number', 'email', 'current_bal', 'member_cif', 'first_login', 'first_login_time', 'terms_agreed', 'blocked_points', 'last_change_password', 'status','created_at');
+                    //->select('id', 'first_name', 'middle_name', 'last_name', 'loyalty_program_id', 'phone_number', 'email', 'current_bal', 'member_reference', 'first_login', 'first_login_time', 'terms_agreed', 'blocked_points', 'last_change_password', 'status','created_at');
             //if (isset($status)) {
                 //$view->where('status', $status);
             //}
@@ -591,7 +590,7 @@ class EnrollmentController extends Controller
         }
     }
 
-
+    
     public function uploadEnrollments(Request $request)
     {
         //return $request->all(); exit;
@@ -599,16 +598,16 @@ class EnrollmentController extends Controller
         'data' => 'required'
         ]);
 
-
+        
         if ($validator->fails()) {
             return $this->sendBadRequestResponse($validator->errors());
         }
 
         $service = new HandleBulkUploads();
-
+        
         return $service->uploadEnrolmentData($request);
-
-
+        
+       
     }
 
 
@@ -711,52 +710,16 @@ class EnrollmentController extends Controller
         return Enrollment::select('email', 'first_name', 'last_name')->where('membership_id', $membershipID)->first();
     }
 
-    public function whoAmI(Request $request)
-    {
-
-        if(!($request->loyalty_number)) return response()->json([
-            "message" => "Please, provide a loyalty number",
-            "status" => false
-        ], Response::HTTP_EXPECTATION_FAILED);
-
-        $user = Enrollment::where('loyalty_number', $request->loyalty_number)
-                            ->select('email', 'first_name', 'last_name', 'member_cif')
-                            ->first();
-
-        if($user) return response()->json([
-            "message" => "Record retrieved successfully",
-            "status" => true,
-            "user" => $user
-        ]);
-
-        return response()->json([
-            "message"   =>  $request->loyalty_number . " does not exists",
-            "status"    =>  false,
-        ], Response::HTTP_NOT_FOUND);
+    public function whoAmI(Request $request){
+        
+        return Enrollment::where('loyalty_number', $request->loyalty_number)->select('email', 'first_name', 'last_name', 'member_reference')->first();
     }
 
     public function whoAmI2(Request $request){
         //return $request->all();
-        if(!($request->member_cif)) return response()->json([
-            "message" => "Please, provide a member reference",
-            "status"  => false
-        ], Response::HTTP_EXPECTATION_FAILED);
-
-        $user = Enrollment::where('member_cif', $request->member_cif)
-                            ->select('email', 'first_name', 'last_name', 'loyalty_number')
-                            ->first();
-
-        if($user) return response()->json([
-            "message" => "Record retrieved successfully",
-            "status" => true,
-            "user" => $user
-        ]);
-
-        return response()->json([
-            "message" => $request->member_cif . " does not exists",
-            "status" => false
-        ], Response::HTTP_NOT_FOUND);
+		//print_r(Enrollment::where('id', '>', 0)->get());
+        return Enrollment::where('member_reference', $request->member_reference)->select('email', 'first_name', 'last_name', 'loyalty_number')->first();
     }
-
-
+    
+ 
 }

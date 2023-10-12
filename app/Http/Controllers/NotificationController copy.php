@@ -34,7 +34,7 @@ class NotificationController extends Controller
                 "status" => false
             ]);
         }else{
-            $blank_membership = Transaction::where('id', '>', $request->query('last_row'))->where('member_cif', '=', '');
+            $blank_membership = Transaction::where('id', '>', $request->query('last_row'))->where('member_reference', '=', '');
 
             return $blank_membership->count();
         }

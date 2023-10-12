@@ -37,7 +37,7 @@ class EnrollmentsImport implements ToModel// SkipsOnError, WithValidation, Skips
             'branch_id' => $row[3],
             'loyalty_program_id' => $row[4],
             'email' => $row[5],
-            'member_cif' => $row[6],
+            'member_reference' => $row[6],
             'password' => Hash::make('password'),
         ]);
 
