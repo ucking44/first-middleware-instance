@@ -11,9 +11,9 @@ LOG_LEVEL=debug
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=perx_database
-DB_USERNAME=perx_database_user
-DB_PASSWORD=perxDemo44!
+DB_DATABASE=perx_db_user
+DB_USERNAME=perx_user
+DB_PASSWORD=
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
@@ -62,3 +62,11 @@ COMPANY_ID = 3
 # EMAIL_SERVICE_URL=https://bpr-002.fidelitybank.ng/bankapi/messaging/v1/email/send
 # EMAIL_SERVICE_URL_BANK_DEMO=https://openapigateway.fidelitybank.ng/BankAPI/messaging/v1/email/send
 EMAIL_SERVICE_URL_LSL_LIVE=https://loyaltysolutionsnigeria.com/email_templates/sendmail2.php
+
+
+# DB_CONNECTION=mysql
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=perx_database
+# DB_USERNAME=perx_database_user
+# DB_PASSWORD=perxDemo44!
