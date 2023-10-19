@@ -19,7 +19,7 @@ class CreateEnrolreportLogTable extends Migration
             $table->string('lastname')->nullable();
             $table->string('email')->nullable();
             $table->string('phoneno')->nullable();
-            $table->bigInteger('customerid')->nullable()->unsigned();
+            $table->string('customerid')->nullable();
             $table->string('branchcode')->nullable();
             $table->bigInteger('fileid')->nullable()->unsigned();
             $table->integer('status_code', false, true)->nullable();

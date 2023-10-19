@@ -19,8 +19,8 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             //$table->dropForeign('transactions_member_id_foreign');
             $table->id();
-            //$table->string('member_reference');
-            $table->string('member_cif')->nullable();
+            $table->string('member_reference');
+            //$table->string('member_cif')->nullable();
             $table->string('account_number')->nullable();
             $table->string('product_code')->nullable();
             $table->integer('quantity')->nullable();

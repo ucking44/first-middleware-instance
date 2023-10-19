@@ -17,7 +17,7 @@ class TransactionReportLog extends Controller
     {
         //
         if ($request->filter){
-            $sql = "select * from transaction_report_logs where transaction_reference= $request->filter OR member_cif=$request->filter";
+            $sql = "select * from transaction_report_logs where transaction_reference= $request->filter OR member_reference=$request->filter";
         }else{
             $sql = 'select * from transaction_report_logs where 1 order by id desc limit 500 ';
             }
@@ -75,7 +75,7 @@ class TransactionReportLog extends Controller
     {
         //
         Log::info;
-        $transaction_logs = DB::select("select * from transaction_report_logs where transaction_reference= $request->data OR member_cif=$request->data");
+        $transaction_logs = DB::select("select * from transaction_report_logs where transaction_reference= $request->data OR member_reference=$request->data");
         $data = [];
         $data['status'] = true;
         $data['status_code'] = 1;

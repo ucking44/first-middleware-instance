@@ -11,7 +11,7 @@ class CompanyService{
        $this->company_id = $companyID; 
     }
     
-    public  function getCompanyDetails():array|object
+    public  function getCompanyDetails()
     {
        $details = Company::where('id', $this->company_id);
        

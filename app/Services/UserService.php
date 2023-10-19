@@ -14,7 +14,7 @@ class UserService{
     }
 
     public static function getDetails($membership_id){
-        $user = Enrollment::where('member_cif', $membership_id)->first();
+        $user = Enrollment::where('member_reference', $membership_id)->first();
         return $user;
     }
 }

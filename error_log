@@ -1,0 +1,1 @@
+[12-Oct-2023 09:57:57 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.1.24. in /home/perxwebsite/public_html/new-middleware-perx-instance/vendor/composer/platform_check.php on line 24

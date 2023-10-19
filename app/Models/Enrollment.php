@@ -38,7 +38,7 @@ class Enrollment extends Authenticatable
         'total_debit',
         'blocked_points',
         //'member_reference',
-        'member_cif',
+        'member_reference',
         'first_login',
         'first_login_time',
         'terms_agreed',

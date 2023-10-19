@@ -11,7 +11,8 @@ use App\Interfaces\IChannelConfig;
 use App\Interfaces\INotType;
 use App\Jobs\SendMultipleNotification;
 use App\Models\NotificationLog;
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 //nclude 'vendor/autoload.php';
 
@@ -238,7 +239,29 @@ class SendNotificationService
         return response()->json($response, 401);
     }
 
-    // public static function sendMail($mail_subject, $mail_body,$bcc_mails, $name_arr, $recipient){
+    public static function sendMail($mail_subject, $mail_body,$bcc_mails, $recipient){
+        
+        
+        $queries = array(
+                "email"=> $recipient,
+                "body"=>$mail_body,
+                "subject"=>$mail_subject,
+          );
+          
+          $url = "loyaltysolutionsnigeria.com/fbn_templates/sendmail.php";
+          //$url = "rewardsboxnigeria.com/email_service_v2/sendmail3.php";
+          $ch = curl_init($url);
+          curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+          curl_setopt($ch, CURLOPT_POSTFIELDS, $queries);
+          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+          curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+          $response = curl_exec($ch);
+        
+        return $response;
+        
+        
+        
+    //     require base_path("vendor/autoload.php");
     //     $mail = new PHPMailer(true);
 
     //     try {
@@ -252,11 +275,11 @@ class SendNotificationService
             
     //         //Recipients
     //         $mail->setFrom('contactus@perxclm.com', 'Loyalty Manager');
-    //         $mail->addAddress($recipient, $name_arr[0] . ' ' . $name_arr[1] );     //Add a recipient
+    //         $mail->addAddress($recipient, '' );     //Add a recipient
     //         //$mail->addAddress('Joachim@loyaltysolutionsnigeria.com');               //Name is optional
     //         //$mail->addReplyTo('contactus@perxclm.com', 'Loyalty Manager');
     //         //$mail->addCC('joseph@loyaltysolutionsnigeria.com');
-    //         $mail->addBCC('ojiodujoachim@gmail.com');
+    //         $mail->addBCC('nwidehifeanyi@yahoo.com');
     //         if(!empty($bcc_mails)){
     //             $mail->addBCC($bcc_mails);
     //         }
@@ -272,10 +295,10 @@ class SendNotificationService
     //         It"s our way of thanking you for your';
 
     //         $mail->send();
-    //          'Message has been sent';
+    //         return 'Message has been sent';
     //             } catch (Exception $e) {
     //                  "Message could not be sent. Mailer Error: {$mail->ErrorInfo} $e";
     //             }
-    // } 
+    } 
 
 }

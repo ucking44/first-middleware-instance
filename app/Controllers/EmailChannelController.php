@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Http\Controllers\EnrollmentController;
 use App\Services\EmailDispatcher;
@@ -16,12 +15,12 @@ class EmailChannelController extends Controller
        //print_r($request->all());
         $data = array("sender"=>"noreply@fidelitybank", "from"=> "noreply@fidelitybank.ng","to"=>isset($request->email)==true?$request->email:$request->to, "subject"=>$request->subject, "body"=> $request->body);
             //$loyalty_number = trim(EnrolmentMigrationService::string_decrypt($request->Membership_ID, 'SmoothJay', '5666685225155700'));
-            $url = env('EMAIL_SERVICE_URL', 'https://10.10.5.24/bankapi/messaging/v1/email/send ');
+            $url = env('EMAIL_SERVICE_URL_LSL_LIVE', 'https://loyaltysolutionsnigeria.com/email_templates/sendmail2.php');
             $response = CurlService::doCURL($url, $data);
 
              //print_r($response);
             if (!empty($response)){
-              
+              return "Nothin...";
             }else{
                
                 return 0;

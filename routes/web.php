@@ -49,7 +49,7 @@ Route::get('/', function () {
 //  array(
 //    '--path' => 'database/migrations',
 //    ));
- return "Middleware is running on Badh Guy system: " . now() ;
+ return "Middleware is running on Badh... Guy system: " . now() ;
 });
 
 //total dumped

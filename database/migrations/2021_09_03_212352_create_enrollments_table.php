@@ -19,7 +19,7 @@ class CreateEnrollmentsTable extends Migration
             $table->unsignedBigInteger('branch_id')->nullable();
             $table->unsignedBigInteger('branch_code')->nullable();
             $table->unsignedBigInteger('tier_id')->nullable();
-            $table->string('branch_codes')->nullable();
+            //$table->string('branch_codes')->nullable();
             $table->bigInteger('cron_id')->nullable();
             $table->string('loyalty_number')->index()->nullable();
             $table->string('account_number')->nullable(); //like BVN
@@ -35,8 +35,8 @@ class CreateEnrollmentsTable extends Migration
             $table->decimal('total_credit', 15,2)->default(0.00);
             $table->decimal('total_debit', 15,2)->default(0.00);
             $table->decimal('blocked_points', 15,2)->default(0.00);
-            //$table->string('member_reference')->nullable(); //like BVN
-            $table->string('member_cif')->nullable(); //like BVN
+            $table->string('member_reference')->nullable(); //like BVN
+            //$table->string('member_cif')->nullable(); //like BVN
             $table->tinyInteger('first_login')->default(0);
             $table->dateTime('first_login_time')->nullable();
             $table->tinyInteger('terms_agreed')->default(0);

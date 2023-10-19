@@ -11,12 +11,13 @@ class CurlService{
             "$key: $value",
             "type: text"
          );
+         //dd($url);
             $curl= curl_init();
             $ch = $curl;
             $timeout = 0; // Set 0 for no timeout.
             curl_setopt($ch, CURLOPT_URL, $url);
             
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, FALSE);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postFields));
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
             curl_setopt($ch, CURLOPT_HTTPHEADER,$headers);

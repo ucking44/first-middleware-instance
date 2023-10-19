@@ -5,12 +5,12 @@ use App\Models\Enrollment;
 class MigrationService
 {
     //public static $key = '!QAZXSW@#EDCVFR$';
-    public static $key = 'bankxyz';
-    public static $iv = '5666685225155700';
+    //public static $key = 'bankxyz';
+    //public static $iv = '1234567891011121'; 
     protected static $program = "First Bank Loyalty Programme";
     protected static $placeholders = array('$memberID', '$first_name', '$last_name', '$pin', '$points', '$email', '$program');
     protected static $link = "https://fbn-customer-portal.vercel.app";
-    protected static $url = "https://greenrewards.perxclm.com/api/v1/index.php";
+    protected static $url = "https://firstbankloyalty.perxclm.com/api/v1/index.php";
     //protected static $link = "https://loyalty.fidelitybank.ng/login.php";
     //protected static $url = "https://firstbankloyalty.perxclm.com/api/v1/index.php";
 
@@ -24,7 +24,7 @@ class MigrationService
 
     }
 
-    protected static function pushToPERX($url="https://greenrewards.perxclm.com/api/v1/index.php", $postFields, $payload)
+    protected static function pushToPERX($url="https://firstbankloyalty.perxclm.com/api/v1/index.php", $postFields, $payload)
     {
 
         $curl= curl_init();
@@ -50,7 +50,7 @@ class MigrationService
         return $result;
     }
 
-    protected static function pushToPERXAcc($url="https://greenrewards.perxclm.com/api/v1/index.php", $params, $payload)
+    protected static function pushToPERXAcc($url="https://firstbankloyalty.perxclm.com/api/v1/index.php", $params, $payload)
     {
 
         $curl= curl_init();
@@ -76,55 +76,55 @@ class MigrationService
         return $result;
     }
 
-    // public static function string_encrypt($string, $key, $iv) : string{
-    //     $ciphering = "AES-128-CTR";
-    //     $encryption_iv = '1234567891011121';
-    //     $key = "SmoothJay";
-    //     $options = 0;
-    //     $encryption = openssl_encrypt($string, $ciphering,
-    //         $key, $options, $iv);
-    //     return $encryption;
-    // }
-
-    // public static function string_decrypt($encryption, $key, $iv) : string{
-    //      $ciphering = "AES-128-CTR";
-    //     $decryption_iv = '1234567891011121';
-    //     $key = "SmoothJay";
-    //     $options = 0;
-    //     $decryption=openssl_decrypt($encryption, $ciphering,
-    //     $key, $options, $iv);
-    //     return $decryption;
-    // }
-
-    function string_encrypt($string, $key, $iv){
-
+    public static function string_encrypt($string, $key, $iv) : string{
         $ciphering = "AES-128-CTR";
-
+        $encryption_iv = '1234567891011121';
+        $key = "!QAZXSW@#EDCVFR$";
         $options = 0;
-
-        $encryption = openssl_encrypt($string, $ciphering,$key, $options, $iv);
-
+        $encryption = openssl_encrypt($string, $ciphering,
+            $key, $options, $iv);
         return $encryption;
-
     }
 
-
-
-    function string_decrypt($encrypted_string, $key, $iv)
-    {
-        $ciphering = "AES-128-CTR";
-
+    public static function string_decrypt($encryption, $key, $iv) : string{
+         $ciphering = "AES-128-CTR";
+        $decryption_iv = '1234567891011121';
+        $key = "!QAZXSW@#EDCVFR$";
         $options = 0;
-
-        $decryption=openssl_decrypt($encrypted_string, $ciphering,
-
+        $decryption=openssl_decrypt($encryption, $ciphering,
         $key, $options, $iv);
-
         return $decryption;
-     }
+    }
+
+    // static function string_encrypt($string, $key, $iv){
+
+    //     $ciphering = "AES-128-CTR";
+
+    //     $options = 0;
+
+    //     $encryption = openssl_encrypt($string, $ciphering,$key, $options, $iv);
+
+    //     return $encryption;
+
+    // }
+
+
+
+    // function string_decrypt($encrypted_string, $key, $iv)
+    // {
+    //     $ciphering = "AES-128-CTR";
+
+    //     $options = 0;
+
+    //     $decryption=openssl_decrypt($encrypted_string, $ciphering,
+
+    //     $key, $options, $iv);
+
+    //     return $decryption;
+    //  }
 
     public static function passwordReturn()
-    {
+    {                               
         return self::string_encrypt('ssw0rd20', self::$key,self::$iv);
     }
 
@@ -135,9 +135,9 @@ class MigrationService
 
 
 
-    public static function resolveMemberReference($member_cif)
+    public static function resolveMemberReference($member_reference)
     {
-        $loyalty_number = Enrollment::where('member_cif', $member_cif)->select('loyalty_number')->first();
+        $loyalty_number = Enrollment::where('member_reference', $member_reference)->select('loyalty_number')->first();
         return $loyalty_number ? $loyalty_number->loyalty_number:null;
     }
 
