@@ -16,7 +16,7 @@ class CreateEnrollmentsTable extends Migration
         Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('loyalty_program_id')->nullable();
-            $table->unsignedBigInteger('branch_id')->nullable();
+            //$table->unsignedBigInteger('branch_id')->nullable();
             $table->unsignedBigInteger('branch_code')->nullable();
             $table->unsignedBigInteger('tier_id')->nullable();
             //$table->string('branch_codes')->nullable();
@@ -50,7 +50,7 @@ class CreateEnrollmentsTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->date('date_enrolled')->nullable();
             $table->foreign('loyalty_program_id')->references('id')->on('loyalty_programs');
-            $table->foreign('branch_code')->references('id')->on('branches')->onDelete('cascade');
+            //$table->foreign('branch_code')->references('id')->on('branches')->onDelete('cascade');
             $table->foreign('tier_id')->references('id')->on('tiers');
             $table->timestamps();
         });
